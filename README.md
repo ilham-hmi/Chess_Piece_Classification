@@ -1,4 +1,4 @@
-# Détection des Pièces d'Échecs avec Mask R-CNN
+# Détection et Classification des Pièces d'Échecs avec Mask R-CNN
 
 ## Autrices
 - HACHMI Ilham - M1 MASERATI
