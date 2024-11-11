@@ -62,6 +62,17 @@ Nous reviendrons sur les valeurs des pertes tout au long de l'exécution des dif
 
 ### Visualisation avec données de validation
 
+Après l'entrainement, nous avons lancer des prédictions sur nos données de validation. Avec un DETECTION_MIN_CONFIDENCE initialement paramétré à 0.9, les résultats n'étaient que très peu concluants. Après avoir testé plusieurs valeurs, nous avons retenu un DETECTION_MIN_CONFIDENCE à 0,6, qui nous renvoyait des résultats plus corrects sans être majoritairement erronés. Vous trouverez ci dessous la visualisation de la prédiction sur plusieurs pièces tirées au hasard dans nos données de validation : 
+
+<img width="217" alt="detect reine" src="https://github.com/user-attachments/assets/f99bf906-13da-46e6-86eb-baa77d25db6d">
+<img width="228" alt="detect fou" src="https://github.com/user-attachments/assets/8ce2ccdb-d282-4198-8ef1-5cad5fe9f240">
+<img width="194" alt="detect cavalier" src="https://github.com/user-attachments/assets/e82c76a4-48fe-48f5-a0d9-28c891fd6ff7">
+<img width="151" alt="detec pion" src="https://github.com/user-attachments/assets/6b9eb1ec-0ac1-4a29-a974-4702edc2a92d">
+<img width="209" alt="detect roi" src="https://github.com/user-attachments/assets/2008a516-ec31-4039-9cca-9a76c80fc31b">
+<img width="205" alt="detect roi 2" src="https://github.com/user-attachments/assets/a2396ed5-03b1-46bd-8e54-038d226b40b5">
+
+Bien que la prédiction soit parfois éronnée ou inexistante à ce niveau de DETECTION_MIN_CONFIDENCE pour certaines images, la prédiction reste dans l'ensemble correcte.
+
 ### Résultats
 
 ### Possibles améliorations
