@@ -97,11 +97,14 @@ On en tire le graphique de perte suivant (construit sur R à partir des données
 
 <img width="502" alt="Courbe loss" src="https://github.com/user-attachments/assets/1d6bd216-4c17-4f49-b494-bf6a9b1cc638">
 
+On remarque une convergence stable des valeurs de nos pertes au fur et à mesure de l'exécution des epochs, qui pourrait être améliorée si le nombre d'epoch avait été plus important.
+
 #### Matrice de confusion
 
 Nous tirons de notre modèle la matrice confusion suivante :
 
 <img width="380" alt="Matrice de confusion" src="https://github.com/user-attachments/assets/d769f78e-018a-4334-b448-588ecbb496fd">
+
 
 
 
