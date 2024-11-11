@@ -52,7 +52,7 @@ Vous trouverez le code complet attaché au projet au format .ipynb. Vous trouver
 
 ### Entrainement
 
-Nous avons lancé notre entrainement avec 11 epochs de 250 pas chacune. Vous retrouverez le dossier logs\ attaché au projet, dans lequel nous n'avons gardé les résultats que du dernier entrainement, les entrainements d'essais précédemment réalisés ayant été exclus.
+Nous avons lancé notre entrainement avec 11 époques de 250 pas chacune. Vous retrouverez le dossier logs\ attaché au projet, dans lequel nous n'avons gardé les résultats que du dernier entrainement, les entrainements d'essais précédemment réalisés ayant été exclus.
 
 Notre entrainement nous affiche ces valeurs de pertes à la fin de la dernière epoch : 
 
@@ -77,7 +77,7 @@ Bien que la prédiction soit parfois éronnée ou inexistante à ce niveau de DE
 
 #### Graphique de pertes
 
-Nous tirons de notre entrainement les valeurs des pertes (loss) de chaque epoch exécutée, grâce auxquelles nous construisons le graphique de perte (généré sur R) :
+Nous tirons de notre entrainement les valeurs des pertes (loss) de chaque époque exécutée, grâce auxquelles nous construisons le graphique de perte (généré sur R) :
 
 | Epoch | Train Loss | Validation Loss |
 |-------|------------|-----------------|
@@ -106,6 +106,8 @@ On remarque que le modèle ne reconnait pas les différentes pièces avec la mê
 
 
 ### Conclusion et possibles améliorations
+
+Nous pouvons conclure que notre modèle semble bien fonctionner pour certaines classes de pièces, mais fonctionne en revanche de façon médiocre pour d'autres. Plusieurs améliorations sont envisageables pour l'améliorer : entre autres, recueillir plus de données d'entrainement, en particulier concernant les classes où les confusions sont les plus fréquentes, ajuster les hyperparamètres tels que le nombre d'époques ou le nombre de pas. La réduction du DETECTION_MIN_CONFIDENCE au moment de l'entrainement aurait aussi pu être envisagée, la valeur trop élevée ayant peut être forcer notre modèle à ignorer certaines selections.
 
 
 
