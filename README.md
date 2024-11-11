@@ -110,8 +110,6 @@ On remarque que le modèle ne reconnait pas les différentes pièces avec la mê
 Nous pouvons conclure que notre modèle semble bien fonctionner pour certaines classes de pièces, mais fonctionne en revanche de façon médiocre pour d'autres. Plusieurs améliorations sont envisageables pour l'améliorer : entre autres, recueillir plus de données d'entrainement, en particulier concernant les classes où les confusions sont les plus fréquentes, ajuster les hyperparamètres tels que le nombre d'époques ou le nombre de pas. La réduction du DETECTION_MIN_CONFIDENCE au moment de l'entrainement aurait aussi pu être envisagée, la valeur trop élevée ayant peut être forcer notre modèle à ignorer certaines selections.
 
 
-
-
 ## Difficultés Rencontrées
 | Problème | Description | Solution |
 |----------|-------------|----------|
@@ -125,6 +123,11 @@ Nous pouvons conclure que notre modèle semble bien fonctionner pour certaines c
 | **Avertissement Skimage** | Avertissement lors de l'utilisation de skimage.draw.polygon au moment du lancement de l'entrainement. | Ajout du paramètre order=0 dans utils.py pour supprimer l’avertissement lors de la création des masques. |
 | **Erreur ValueError: zero-size array** | Les annotations JSON contenaient des segmentations vides ou mal formatées, causant une erreur lors de la création des masques. | Modification de la fonction load_mask pour ajouter une vérification des segmentations avant traitement. |
 | **Coordonnées dépassant la résolution de l'image** | Annotations avec coordonnées de segmentation dépassant la taille de l'image, causant des erreurs de masques. | Restriction des coordonnées dans les limites de la résolution de l'image pour les segmentation problématiques. |
+
+## Dernier mot sur le projet
+
+Ce premier projet en Intelligence Artificielle a été très instructif pour nous, nous introduisant à cette discipline par le biais d'un cas pratique de Deep Learning. Les nombreux défis auxquels nous avons fait face nous ont contraint à nous renseigner davantage, ce qui nous a conduit à une meilleure compréhension des processus sous jacents à la reconnaissance d'image. Ce premier pas dans ce vaste domaine a éveillé notre curiosité et nous a motivé à approfondir nos connaissances pour nos futurs projets.
+
 
 ## Contribuer
 Les contributions sont les bienvenues !
