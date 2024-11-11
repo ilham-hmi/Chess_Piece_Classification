@@ -127,10 +127,3 @@ Nous pouvons conclure que notre modèle semble bien fonctionner pour certaines c
 ## Dernier mot sur le projet
 
 Ce premier projet en Intelligence Artificielle a été très instructif pour nous, nous introduisant à cette discipline par le biais d'un cas pratique de Deep Learning. Les nombreux défis auxquels nous avons fait face nous ont contraint à nous renseigner davantage, ce qui nous a conduit à une meilleure compréhension des processus sous jacents à la reconnaissance d'image. Ce premier pas dans ce vaste domaine a éveillé notre curiosité et nous a motivé à approfondir nos connaissances pour nos futurs projets.
-
-
-## Contribuer
-Les contributions sont les bienvenues !
-
-
-
