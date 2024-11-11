@@ -3,7 +3,7 @@
 ## Autrices
 - HACHMI Ilham - M1 MASERATI
 - TRAORE Assa - M1 MASERATI
-- EL HACHMI Sehame - M1 MASERATI
+- EL HACHMI Séhame - M1 MASERATI
 
 
 ## Objectif du Projet
