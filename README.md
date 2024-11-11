@@ -48,7 +48,23 @@ Les images et les annotations sont organisées de la manière suivante :
 - `val/`: Contient les images et annotations au format JSON pour la validation.
 
 ## Rapport
-Vous trouverez le rapport, le code d'entrainement et de validation ainsi que le dossier logs attachés au projet au format .ipynb. Vous trouverez également la matrice de confusion et le graphique des pertes au format .jpg.
+Vous trouverez le code complet attaché au projet au format .ipynb. Vous trouverez également la matrice de confusion et le graphique des pertes au format .jpg.
+
+### Entrainement
+
+Nous avons lancé notre entrainement avec 11 epochs de 250 pas chacune. Vous retrouverez le dossier logs\ attaché au projet, dans lequel nous n'avons gardé les résultats que du dernier entrainement, les entrainements d'essais précédemment réalisés ayant été exclus.
+
+Notre entrainement nous affiche ces valeurs de pertes à la fin de la dernière epoch : 
+
+<img width="632" alt="Dernière ligne de l'entrainement" src="https://github.com/user-attachments/assets/ad9178d7-e275-469a-80af-950292b68625">
+
+Nous reviendrons sur les valeurs des pertes tout au long de l'exécution des différentes epochs ultérieurement.
+
+### Visualisation avec données de validation
+
+### Résultats
+
+### Possibles améliorations
 
 
 ## Difficultés Rencontrées
