@@ -77,7 +77,7 @@ Bien que la prédiction soit parfois éronnée ou inexistante à ce niveau de DE
 
 #### Graphique de pertes
 
-Nous tirons de notre entrainement les valeurs des pertes (loss) de chaque epoch exécutée :
+Nous tirons de notre entrainement les valeurs des pertes (loss) de chaque epoch exécutée, grâce auxquelles nous construisons le graphique de perte (généré sur R) :
 
 | Epoch | Train Loss | Validation Loss |
 |-------|------------|-----------------|
@@ -92,9 +92,6 @@ Nous tirons de notre entrainement les valeurs des pertes (loss) de chaque epoch 
 | 9     | 0.3524     | 0.3817          |
 | 10    | 0.3388     | 0.4145          |
 | 11    | 0.3023     | 0.1515          |
-
-On en tire le graphique de perte suivant (construit sur R à partir des données précédentes) :
-
 <img width="502" alt="Courbe loss" src="https://github.com/user-attachments/assets/1d6bd216-4c17-4f49-b494-bf6a9b1cc638">
 
 On remarque une convergence stable des valeurs de nos pertes au fur et à mesure de l'exécution des epochs, qui pourrait être améliorée si le nombre d'epoch avait été plus important.
@@ -105,11 +102,12 @@ Nous tirons de notre modèle la matrice confusion suivante :
 
 <img width="380" alt="Matrice de confusion" src="https://github.com/user-attachments/assets/d769f78e-018a-4334-b448-588ecbb496fd">
 
+On remarque que le modèle ne reconnait pas les différentes pièces avec la même précision : le cavalier est la pièce reconnue, et n'est confondu avec aucune autre type de pièce. Cela peut être expliqué par la forme spécifique au cavalier, qui est relativement singulière et très reconnaissable. Le fous est la pièce la moins reconnaissable par notre modèle, confondue principalement avec le fond (BackGround), ou les pions. Le fait que des pièces commes le pion ou le roi sont également confondue avec d'autres pièces peut être expliqué par le fait que certaines classes de pièces partagent des caractéristique en terme de design.
 
 
+### Conclusion et possibles améliorations
 
 
-### Possibles améliorations
 
 
 ## Difficultés Rencontrées
