@@ -54,7 +54,7 @@ Vous trouverez le rapport ainsi que le code d'entrainement et de validation ains
 ## Difficultés Rencontrées
 | Problème | Description | Solution |
 |----------|-------------|----------|
-| **Version de Python** | Ajustement de la version de Python pour assurer la compatibilité avec le MRCNN utilisé. | Utilisation de la version 3.8.6. |
+| **Version de Python** | Ajustement de la version de Python pour assurer la compatibilité avec le MRCNN utilisé. | Création d'un environnement virtuel via l'invite de commande et utilisation de la version 3.8.6 de Python. |
 | **Incompatibilités Keras/TensorFlow** | Problèmes récurrents d'import entre les versions Keras et TensorFlow. | Utilisation de `tensorflow.compat.v1` et installation des versions Keras 2.3.1 et Tensorflow 1.15 |
 | **Incompatibilité TensorFlow/Mask RCNN** | La version de Mask R-CNN n’était pas compatible avec la version de TensorFlow utilisée. | Utilisation de TensorFlow 1.15 |
 | **Création des fichiers d'annotation JSON** | Noms de fichiers d'images se répétant entre les différentes classes, entraînant des conflits dans les annotations. | Modification des chemins et noms de fichiers pour les rendre uniques dans le fichier JSON généré. |
