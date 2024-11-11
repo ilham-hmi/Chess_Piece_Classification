@@ -48,7 +48,7 @@ Les images et les annotations sont organisées de la manière suivante :
 - `val/`: Contient les images et annotations au format JSON pour la validation.
 
 ## Rapport
-Vous trouverez le rapport ainsi que le code d'entrainement et de validation ainsi que le dossier logs attachés au projet au format .ipynb. Vous trouverez également la matrice de confusion et le graphique des pertes au format .jpg.
+Vous trouverez le rapport, le code d'entrainement et de validation ainsi que le dossier logs attachés au projet au format .ipynb. Vous trouverez également la matrice de confusion et le graphique des pertes au format .jpg.
 
 
 ## Difficultés Rencontrées
