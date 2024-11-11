@@ -75,6 +75,37 @@ Bien que la prédiction soit parfois éronnée ou inexistante à ce niveau de DE
 
 ### Résultats
 
+#### Graphique de pertes
+
+Nous tirons de notre entrainement les valeurs des pertes (loss) de chaque epoch exécutée :
+
+| Epoch | Train Loss | Validation Loss |
+|-------|------------|-----------------|
+| 1     | 1.1859     | 0.4035          |
+| 2     | 1.0839     | 1.1851          |
+| 3     | 0.5812     | 1.0321          |
+| 4     | 0.5233     | 0.6632          |
+| 5     | 0.4827     | 0.4612          |
+| 6     | 0.4125     | 0.3025          |
+| 7     | 0.3912     | 0.4244          |
+| 8     | 0.3572     | 0.1724          |
+| 9     | 0.3524     | 0.3817          |
+| 10    | 0.3388     | 0.4145          |
+| 11    | 0.3023     | 0.1515          |
+
+On en tire le graphique de perte suivant (construit sur R à partir des données précédentes) :
+
+<img width="502" alt="Courbe loss" src="https://github.com/user-attachments/assets/1d6bd216-4c17-4f49-b494-bf6a9b1cc638">
+
+#### Matrice de confusion
+
+Nous tirons de notre modèle la matrice confusion suivante :
+
+<img width="380" alt="Matrice de confusion" src="https://github.com/user-attachments/assets/d769f78e-018a-4334-b448-588ecbb496fd">
+
+
+
+
 ### Possibles améliorations
 
 
