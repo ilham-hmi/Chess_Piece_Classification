@@ -48,21 +48,24 @@ Les images et les annotations sont organisées de la manière suivante :
 - `val/`: Contient les images et annotations au format JSON pour la validation.
 
 ## Rapport
-Vous trouverez le code complet attaché au projet au format .ipynb. Vous trouverez également la matrice de confusion et le graphique des pertes au format .jpg.
+Vous trouverez le code complet attaché au projet au format .ipynb. 
+Dû à l'échec d'importation du dossier logs et des données sur GitHub du fait de leur taille (même après compresiion), nous avons choisi de créer un Google Drive où vous retrouverez le logs, les données et les images utilisées dans le reste de ce rapport (matrice de confusion, visualisations et graphique de pertes). Vous pouvez y accéder par le biais de ce lien :
+
+[Accéder aux fichiers Google Drive](https://drive.google.com/drive/folders/1kOq5Tw-TcAt8bjzzpom8F91n0UQp63xT)
 
 ### Entrainement
 
-Nous avons lancé notre entrainement avec 11 époques de 250 pas chacune. Vous retrouverez le dossier logs\ attaché au projet, dans lequel nous n'avons gardé les résultats que du dernier entrainement, les entrainements d'essais précédemment réalisés ayant été exclus.
+Nous avons lancé notre entrainement avec 11 époques de 250 pas chacune. Vous retrouverez le dossier logs\ dans le drive accessible par le lien donné plus haut. Nous n'avons gardé dans le dossier logs que les résultats du dernier entrainement, les entrainements d'essais précédemment réalisés ayant été exclus.
 
-Notre entrainement nous affiche ces valeurs de pertes à la fin de la dernière epoch : 
+Notre entrainement nous affiche ces valeurs de pertes à la fin de la dernière éppoque : 
 
 <img width="632" alt="Dernière ligne de l'entrainement" src="https://github.com/user-attachments/assets/ad9178d7-e275-469a-80af-950292b68625">
 
-Nous reviendrons sur les valeurs des pertes tout au long de l'exécution des différentes epochs ultérieurement.
+Nous reviendrons sur les valeurs des pertes tout au long de l'exécution des différentes époques ultérieurement.
 
 ### Visualisation avec données de validation
 
-Après l'entrainement, nous avons lancer des prédictions sur nos données de validation. Avec un DETECTION_MIN_CONFIDENCE initialement paramétré à 0.9, les résultats n'étaient que très peu concluants. Après avoir testé plusieurs valeurs, nous avons retenu un DETECTION_MIN_CONFIDENCE à 0,6, qui nous renvoyait des résultats plus corrects sans être majoritairement erronés. Vous trouverez ci dessous la visualisation de la prédiction sur plusieurs pièces tirées au hasard dans nos données de validation : 
+Après l'entrainement, nous avons lancé des prédictions sur nos données de validation. Avec un DETECTION_MIN_CONFIDENCE initialement paramétré à 0.9, les résultats n'étaient que très peu concluants. Après avoir testé plusieurs valeurs, nous avons retenu un DETECTION_MIN_CONFIDENCE à 0,6, qui nous renvoyait des résultats plus corrects sans être majoritairement erronés. Vous trouverez ci dessous la visualisation de la prédiction sur plusieurs pièces tirées au hasard dans nos données de validation : 
 
 <img width="217" alt="detect reine" src="https://github.com/user-attachments/assets/f99bf906-13da-46e6-86eb-baa77d25db6d">
 <img width="228" alt="detect fou" src="https://github.com/user-attachments/assets/8ce2ccdb-d282-4198-8ef1-5cad5fe9f240">
@@ -94,7 +97,7 @@ Nous tirons de notre entrainement les valeurs des pertes (loss) de chaque époqu
 | 11    | 0.3023     | 0.1515          |
 <img width="502" alt="Courbe loss" src="https://github.com/user-attachments/assets/1d6bd216-4c17-4f49-b494-bf6a9b1cc638">
 
-On remarque une convergence stable des valeurs de nos pertes au fur et à mesure de l'exécution des epochs, qui pourrait être améliorée si le nombre d'epoch avait été plus important.
+On remarque une convergence stable des valeurs de nos pertes au fur et à mesure de l'exécution des époques, qui pourrait être améliorée si le nombre d'époques avait été plus important.
 
 #### Matrice de confusion
 
@@ -102,12 +105,12 @@ Nous tirons de notre modèle la matrice confusion suivante :
 
 <img width="380" alt="Matrice de confusion" src="https://github.com/user-attachments/assets/d769f78e-018a-4334-b448-588ecbb496fd">
 
-On remarque que le modèle ne reconnait pas les différentes pièces avec la même précision : le cavalier est la pièce reconnue, et n'est confondu avec aucune autre type de pièce. Cela peut être expliqué par la forme spécifique au cavalier, qui est relativement singulière et très reconnaissable. Le fous est la pièce la moins reconnaissable par notre modèle, confondue principalement avec le fond (BackGround), ou les pions. Le fait que des pièces commes le pion ou le roi sont également confondue avec d'autres pièces peut être expliqué par le fait que certaines classes de pièces partagent des caractéristique en terme de design.
+On remarque que le modèle ne reconnaît pas les différentes pièces avec la même précision : le cavalier est la pièce la mieux reconnue et n'est confondu avec aucune autre pièce. Cela peut s'expliquer par la forme spécifique du cavalier, qui est relativement singulière et très reconnaissable. Le fou est la pièce la moins reconnaissable par notre modèle, souvent confondu avec le fond (background) ou les pions. Le fait que des pièces comme le pion ou le roi soient également confondues avec d'autres pièces peut s'expliquer par le fait que certaines classes de pièces partagent des caractéristiques similaires en termes de design.
 
 
 ### Conclusion et possibles améliorations
 
-Nous pouvons conclure que notre modèle semble bien fonctionner pour certaines classes de pièces, mais fonctionne en revanche de façon médiocre pour d'autres. Plusieurs améliorations sont envisageables pour l'améliorer : entre autres, recueillir plus de données d'entrainement, en particulier concernant les classes où les confusions sont les plus fréquentes, ajuster les hyperparamètres tels que le nombre d'époques ou le nombre de pas. La réduction du DETECTION_MIN_CONFIDENCE au moment de l'entrainement aurait aussi pu être envisagée, la valeur trop élevée ayant peut être forcer notre modèle à ignorer certaines selections.
+Nous pouvons conclure que notre modèle semble bien fonctionner pour certaines classes de pièces, mais fonctionne de manière médiocre pour d'autres. Plusieurs améliorations sont envisageables pour l'optimiser : entre autres, recueillir davantage de données d'entraînement, en particulier pour les classes où les confusions sont les plus fréquentes, et ajuster les hyperparamètres tels que le nombre d'époques ou le nombre de pas. La réduction de DETECTION_MIN_CONFIDENCE lors de l'entraînement aurait également pu être envisagée, une valeur trop élevée ayant peut-être poussé notre modèle à ignorer certaines sélections.
 
 
 ## Difficultés Rencontrées
@@ -126,4 +129,4 @@ Nous pouvons conclure que notre modèle semble bien fonctionner pour certaines c
 
 ## Dernier mot sur le projet
 
-Ce premier projet en Intelligence Artificielle a été très instructif pour nous, nous introduisant à cette discipline par le biais d'un cas pratique de Deep Learning. Les nombreux défis auxquels nous avons fait face nous ont contraint à nous renseigner davantage, ce qui nous a conduit à une meilleure compréhension des processus sous jacents à la reconnaissance d'image. Ce premier pas dans ce vaste domaine a éveillé notre curiosité et nous a motivé à approfondir nos connaissances pour nos futurs projets.
+Ce premier projet en intelligence artificielle a été très instructif pour nous, nous introduisant à cette discipline par le biais d'un cas pratique de deep learning. Les nombreux défis auxquels nous avons fait face nous ont poussés à nous documenter davantage, ce qui nous a conduit à une meilleure compréhension des processus sous-jacents à la reconnaissance d'images. Ce premier pas dans ce vaste domaine a éveillé notre curiosité et nous a motivés à approfondir nos connaissances pour nos futurs projets.
