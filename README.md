@@ -55,13 +55,13 @@ Dû à l'échec d'importation du dossier logs et des données sur GitHub du fait
 
 ### Entrainement
 
-Nous avons lancé notre entrainement avec 11 époques de 250 pas chacune. Vous retrouverez le dossier logs\ dans le drive accessible par le lien donné plus haut. Nous n'avons gardé dans le dossier logs que les résultats du dernier entrainement, les entrainements d'essais précédemment réalisés ayant été exclus.
+Nous avons lancé notre entrainement avec 11 epochs de 250 pas chacune. Vous retrouverez le dossier logs\ dans le drive accessible par le lien donné plus haut. Nous n'avons gardé dans le dossier logs que les résultats du dernier entrainement, les entrainements d'essais précédemment réalisés ayant été exclus.
 
-Notre entrainement nous affiche ces valeurs de pertes à la fin de la dernière éppoque : 
+Notre entrainement nous affiche ces valeurs de pertes à la fin de la dernière epoch : 
 
 <img width="632" alt="Dernière ligne de l'entrainement" src="https://github.com/user-attachments/assets/ad9178d7-e275-469a-80af-950292b68625">
 
-Nous reviendrons sur les valeurs des pertes tout au long de l'exécution des différentes époques ultérieurement.
+Nous reviendrons sur les valeurs des pertes tout au long de l'exécution des différentes epochs ultérieurement.
 
 ### Visualisation avec données de validation
 
@@ -80,7 +80,7 @@ Bien que la prédiction soit parfois éronnée ou inexistante à ce niveau de DE
 
 #### Graphique de pertes
 
-Nous tirons de notre entrainement les valeurs des pertes (loss) de chaque époque exécutée, grâce auxquelles nous construisons le graphique de perte (généré sur R) :
+Nous tirons de notre entrainement les valeurs des pertes (loss) de chaque epoch exécutée, grâce auxquelles nous construisons le graphique de perte (généré sur R) :
 
 | Epoch | Train Loss | Validation Loss |
 |-------|------------|-----------------|
@@ -97,7 +97,7 @@ Nous tirons de notre entrainement les valeurs des pertes (loss) de chaque époqu
 | 11    | 0.3023     | 0.1515          |
 <img width="502" alt="Courbe loss" src="https://github.com/user-attachments/assets/1d6bd216-4c17-4f49-b494-bf6a9b1cc638">
 
-On remarque une convergence stable des valeurs de nos pertes au fur et à mesure de l'exécution des époques, qui pourrait être améliorée si le nombre d'époques avait été plus important.
+On remarque une convergence stable des valeurs de nos pertes au fur et à mesure de l'exécution des époques, qui pourrait être améliorée si le nombre d'epochs avait été plus important.
 
 #### Matrice de confusion
 
@@ -110,7 +110,7 @@ On remarque que le modèle ne reconnaît pas les différentes pièces avec la m�
 
 ### Conclusion et possibles améliorations
 
-Nous pouvons conclure que notre modèle semble bien fonctionner pour certaines classes de pièces, mais fonctionne de manière médiocre pour d'autres. Plusieurs améliorations sont envisageables pour l'optimiser : entre autres, recueillir davantage de données d'entraînement, en particulier pour les classes où les confusions sont les plus fréquentes, et ajuster les hyperparamètres tels que le nombre d'époques ou le nombre de pas. La réduction de DETECTION_MIN_CONFIDENCE lors de l'entraînement aurait également pu être envisagée, une valeur trop élevée ayant peut-être poussé notre modèle à ignorer certaines sélections.
+Nous pouvons conclure que notre modèle semble bien fonctionner pour certaines classes de pièces, mais fonctionne de manière médiocre pour d'autres. Plusieurs améliorations sont envisageables pour l'optimiser : entre autres, recueillir davantage de données d'entraînement, en particulier pour les classes où les confusions sont les plus fréquentes, et ajuster les hyperparamètres tels que le nombre d'epochs ou le nombre de pas. La réduction de DETECTION_MIN_CONFIDENCE lors de l'entraînement aurait également pu être envisagée, une valeur trop élevée ayant peut-être poussé notre modèle à ignorer certaines sélections.
 
 
 ## Difficultés Rencontrées
